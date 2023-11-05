@@ -31,7 +31,11 @@ def check_in_row(board: list) -> bool:
  "  2  ****"])
     True
     """
-    pass
+    for i in board:
+        for j in i:
+            if j != "*" and j != ' ' and i.count(j) > 1:
+                return False
+    return True
 
 def check_in_col(board: list) -> bool:
     """
