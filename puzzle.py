@@ -63,20 +63,35 @@ def check_in_col(board: list) -> bool:
 
 def check_in_box(board: list) -> bool:
     """
-    This function checks the board to see if there are any duplicate numbers in a box.
+    This function checks the board to see if there are any duplicate numbers in a L shaped 5x5 box.
     >>> check_in_box([\
  "**** ****",\
  "***1 ****",\
  "**  3****",\
  "* 4 1****",\
  "     9 5 ",\
- " 6  83  *",\
+ " 6  82  *",\
  "3   1  **",\
  "  8  2***",\
  "  2  ****"])
     True
     """
-    pass
+    co = 8
+    count = 0
+    cou = 4
+    for j in range(4,9):
+        box = []
+        for k in range(5):
+            box.append(board[k+count][cou])
+        for l in range(5):
+            box.append(board[j][co-l])
+        for m in box:
+            if m != "*" and m != ' ' and box.count(m) > 1:
+                return False
+        count += 1
+        co -= 1
+        cou -= 1
+    return True
 
 if __name__ == '__main__':
     import doctest
