@@ -14,7 +14,7 @@ def validate_board(board: list) -> bool:
  "  2  ****"])
     False
     """
-    pass
+    return check_in_row(board) and check_in_col(board) and check_in_box(board)
 
 def check_in_row(board: list) -> bool:
     """
