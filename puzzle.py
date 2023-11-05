@@ -52,7 +52,14 @@ def check_in_col(board: list) -> bool:
  "  2  ****"])
     False
     """
-    pass
+    for i in range(9):
+        col = []
+        for j in range(9):
+            col.append(board[j][i])
+        for k in col:
+            if k != "*" and k != ' ' and col.count(k) > 1:
+                return False
+    return True
 
 def check_in_box(board: list) -> bool:
     """
