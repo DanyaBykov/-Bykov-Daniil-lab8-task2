@@ -1,6 +1,6 @@
 """
 This module contains the functions for validating the board and checking for a win.
-Link to Git: https://github.com/DanyaBykov/-Bykov-Daniil-lab8-task2
+Link to GitHub: https://github.com/DanyaBykov/-Bykov-Daniil-lab8-task2
 """
 def validate_board(board: list) -> bool:
     """
