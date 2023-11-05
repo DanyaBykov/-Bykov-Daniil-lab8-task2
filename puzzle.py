@@ -1,4 +1,7 @@
-"""This module contains the functions for validating the board and checking for a win."""
+"""
+This module contains the functions for validating the board and checking for a win.
+Link to GitHub: https://github.com/DanyaBykov/-Bykov-Daniil-lab8-task2
+"""
 def validate_board(board: list) -> bool:
     """
     This function validates the board to ensure that it is a valid board.
@@ -14,7 +17,7 @@ def validate_board(board: list) -> bool:
  "  2  ****"])
     False
     """
-    pass
+    return check_in_row(board) and check_in_col(board) and check_in_box(board)
 
 def check_in_row(board: list) -> bool:
     """
