@@ -86,7 +86,7 @@ def check_in_box(board: list) -> bool:
         box = []
         for k in range(5):
             box.append(board[k+count][cou])
-        for l in range(5):
+        for l in range(4):
             box.append(board[j][co-l])
         for m in box:
             if m != "*" and m != ' ' and box.count(m) > 1:
